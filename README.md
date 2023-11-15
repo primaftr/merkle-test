@@ -1,3 +1,23 @@
+# Merkle - First Test
+
+## Run Locally
+Clone the project
+
+```bash
+  git clone https://github.com/primaftr/merkle-test.git
+```
+
+Go to the project directory
+
+```bash
+  cd merkle-test
+```
+
+Run the solution
+```bash
+node first.js
+```
+
 # Merkle - Wedding Guestbook
 
 Coding test from merkle about simple api for managing a wedding guestbook, where users can add their information and leave notes.
