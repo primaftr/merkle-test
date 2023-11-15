@@ -1,11 +1,21 @@
 import express from "express";
+import bodyParser from "body-parser";
+import guestRoutes from "./routes/guestRoutes";
+import authRoutes from "./routes/authRoutes";
+import dotenv from "dotenv";
+
+// Load environment variables from .env file
+dotenv.config();
+
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+app.use(bodyParser.json());
 
-app.listen(port, () => {
-  return console.log(`Express is listening at http://localhost:${port}`);
+// Routes
+app.use("/api", guestRoutes);
+app.use("/api", authRoutes);
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
