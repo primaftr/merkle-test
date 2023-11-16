@@ -49,6 +49,12 @@ Add this line to the env
   PORT=3000
 ```
 
+Seed the db
+
+```bash
+  npx ts-node src/db/seed.ts
+```
+
 
 Start the server
 
